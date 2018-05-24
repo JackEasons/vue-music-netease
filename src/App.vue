@@ -3,10 +3,10 @@
         <!--主体-->
         <mm-header/>
         <router-view class="router-view"/>
-        
+
         <!--更新说明-->
         <mm-dialog ref="versionDialog" :dialogType="1" headText="更新提示" :bodyText="versionBody"/>
-        
+
         <!--播放器-->
         <audio ref="mmPlayer"></audio>
     </div>
@@ -18,7 +18,7 @@
     import MmHeader from 'components/mm-header/mm-header'
     import MmDialog from 'base/mm-dialog/mm-dialog'
     import {getVersion, setVersion} from "assets/js/storage";
-    
+
     export default {
         name: "app",
         components: {
@@ -29,7 +29,7 @@
             let OriginTitile = document.title, titleTime;
             document.addEventListener('visibilitychange', function () {
                 if (document.hidden) {
-                    document.title = '死鬼去哪里了！';
+                    document.title = '好像出了点状况！';
                     clearTimeout(titleTime);
                 } else {
                     document.title = '(つェ⊂)咦!又好了!';
@@ -50,12 +50,12 @@
                     let version = getVersion(), newVersion = pkg.version;
                     if (version !== null) {
                         setVersion(newVersion);
-                        if (version !== newVersion) {
-                            this.$refs.versionDialog.show()
-                        }
-                    } else {
-                        setVersion(newVersion);
-                        this.$refs.versionDialog.show()
+                        // if (version !== newVersion) {
+                        //     this.$refs.versionDialog.show()
+                        // }
+                    // } else {
+                    //     setVersion(newVersion);
+                    //     this.$refs.versionDialog.show()
                     }
                 }, 500)
             }
@@ -84,7 +84,7 @@
 
 <style lang="less">
     @import "~assets/css/var";
-    
+
     #app {
         position: relative;
         width: 100%;

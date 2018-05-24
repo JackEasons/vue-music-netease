@@ -8,9 +8,9 @@
                     <img :src="`${user.avatarUrl}?param=50y50`">
                     <span>{{user.nickname}}</span>
                 </router-link>
-                <dd class="user-btn" @click="openDialog(2)">退出</dd>
+                <!-- <dd class="user-btn" @click="openDialog(2)">退出</dd> -->
             </template>
-            <dd v-else class="user-btn" @click="openDialog(0)">登录</dd>
+            <!-- <dd v-else class="user-btn" @click="openDialog(0)">登录</dd> -->
         </dl>
         <!--登录-->
         <mm-dialog ref="loginDialog" headText="登录" confirmBtnText="登录" cancelBtnText="关闭" @confirm="login">
