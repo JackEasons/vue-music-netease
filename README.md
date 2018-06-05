@@ -49,7 +49,7 @@ node app.js //服务端运行 访问 http://localhost:3000
 ```
 ├── build                                           // webpack配置文件
 ├── config                                          // 项目打包路径
-├── mmPlayer                                        // 项目打包版本，可直接使用
+├── dist                                        // 项目打包版本，可直接使用
 ├── screenshots                                     // 项目截图
 ├── server                                          // 后台服务器目录
 ├── src                                             // 项目源码目录
