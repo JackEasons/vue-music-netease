@@ -15,4 +15,4 @@ yarn-error.log*
 package-lock.json
 /*.lock
 *.lock
-/mmPlayer
+/.cache
