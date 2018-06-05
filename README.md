@@ -1,27 +1,17 @@
-# mmPlayer V1.5.2（2018.05.23）
-
 模仿QQ音乐网页版界面，采用flexbox和position布局；
-mmPlayer虽然是响应式，但主要以为PC端为主，移动端只做相应适配（未做歌词显示）；
+虽然是响应式，但主要以为PC端为主，移动端只做相应适配（未做歌词显示）；
 只做主流浏览器兼容（对IE说拜拜，想想以前做项目还要兼容IE7，都是泪啊！！！）
 
 > #### api：一个开源的[网易云音乐 NodeJS 版 API](https://binaryify.github.io/NeteaseCloudMusicApi)（有api才有动力写！！！）
 
-> #### [在线演示地址](http://music.mtnhao.com)
-
-> #### [桌面版下载](http://cdn.mtnhao.com/mmPlayer.zip)
-
-> #### [React移动端版本（高仿网易云音乐）](https://github.com/maomao1996/react-music)
-
-> #### [交流QQ群：529940193](http://shang.qq.com/wpa/qunwpa?idkey=f8be1b627a89108ccfda9308720d2a4d0eb3306f253c5d3e8d58452e20b91129)
-
 ## 如何安装与使用
 
-> mmPlayer
+> vue-music-netease
 
 ```
-git clone https://github.com/maomao1996/Vue-mmPlayer.git  //下载mmPlayer
+git clone https://github.com/XiaowuMaple/vue-music-netease.git  //下载mmPlayer
 
-cd mmPlayer //进入mmPlayer播放器目录
+cd vue-music-netease //进入播放器目录
 
 npm install //安装依赖
 
@@ -33,14 +23,14 @@ npm run build  //项目打包
 > 后台服务器
 
 ```
-cd mmPlayer/server //进入后台服务器目录
+cd vue-music-netease/server //进入后台服务器目录
 
 npm install //安装依赖
 
 node app.js //服务端运行 访问 http://localhost:3000
 ```
 
-#### 运行mmPlayer后无法获取音乐请检查后台服务器是否启动
+#### 运行后无法获取音乐请检查后台服务器是否启动
 #### assets/js/config的url地址要和后台服务器地址一致
 
 ## 技术栈
@@ -67,7 +57,7 @@ node app.js //服务端运行 访问 http://localhost:3000
 │   │   └── music.js                                // 获取数据
 │   ├── assets                                      // 资源目录
 │   │   ├── css                                     // 样式文件目录
-│   │   │   ├── index.less                          // mmPlayer相关基础样式
+│   │   │   ├── index.less                          // 相关基础样式
 │   │   │   ├── mixin.less                          // 样式混合
 │   │   │   ├── reset.less                          // 样式重置
 │   │   │   └── var.less                            // 样式变量（字体大小、字体颜色、背景颜色）
@@ -113,7 +103,7 @@ node app.js //服务端运行 访问 http://localhost:3000
 │   │   │   └── userList.vue                        // 我的歌单
 │   │   ├── topList
 │   │   │   └── topList.vue                         // 排行榜页面
-│   │   ├── mmPlayer.js                             // 播放器事相关件绑定
+│   │   ├── Player.js                             // 播放器事相关件绑定
 │   │   └── mmPlayer.vue                            // 播放器主页面
 │   ├── router
 │   │   └── index.js                                // 路由配置
@@ -272,5 +262,3 @@ PC端界面自我感觉还行， 就是移动端界面总觉得怪怪的，奈�
 - 如有问题请直接在 Issues 中提，或者您发现问题并有非常好的解决方案，欢迎 PR
 
 ## License
-
-[MIT](https://github.com/maomao1996/Vue-mmPlayer/blob/master/LICENSE)
