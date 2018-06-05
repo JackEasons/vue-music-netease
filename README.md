@@ -133,30 +133,6 @@ node app.js //服务端运行 访问 http://localhost:3000
 - 查看评论
 - 同步网易云歌单
 
-## 界面欣赏
-
-PC端界面自我感觉还行， 就是移动端界面总觉得怪怪的，奈何审美有限，所以又去整了高仿网易云的 React 版本（如果小哥哥、小姐姐们有好看的界面，欢迎交流哈）
-
-### PC
-
-#### 正在播放
-![正在播放](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8cb660c8?w=1920&h=1006&f=png&s=643864)
-#### 排行榜
-![排行榜](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8e6ff8e6?w=1920&h=1006&f=png&s=871255)
-#### 搜索
-![搜索](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8d19a51f?w=1920&h=1007&f=png&s=629351)
-#### 我的歌单
-![我的歌单](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8e9c9182?w=1920&h=1005&f=png&s=1296698)
-#### 我听过的
-![我听过的](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8ea461ee?w=1920&h=1003&f=png&s=646239)
-#### 歌曲评论
-![歌曲评论](https://user-gold-cdn.xitu.io/2018/5/17/1636bc3d8edbd1b0?w=1920&h=1006&f=png&s=675028)
-
-### 移动端
-
-![移动端一](https://user-gold-cdn.xitu.io/2018/5/18/1637315324ff1e07?w=2934&h=1653&f=png&s=1109772)
-![移动端二](https://user-gold-cdn.xitu.io/2018/5/18/1637315a6cdc532a?w=2934&h=1653&f=png&s=1442389)
-
 ## 更新说明
 
 ### V1.5.2（2018.05.23）
