@@ -9,7 +9,7 @@
 > vue-music-netease
 
 ```
-git clone https://github.com/XiaowuMaple/vue-music-netease.git  //下载mmPlayer
+git clone https://github.com/XiaowuMaple/vue-music-netease.git  //下载
 
 cd vue-music-netease //进入播放器目录
 
