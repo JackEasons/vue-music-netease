@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit" />
+    <meta name="force-rendering" content="webkit"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <title>在线音乐播放器</title>
-    <meta name="keywords" content="播放器,在线音乐,在线播放器,音乐播放器,在线音乐播放器" />
-    <meta name="description" content="在线音乐播放器" />
+    <meta name="keywords" content="播放器,在线音乐,在线播放器,音乐播放器,在线音乐播放器"/>
+    <meta name="description" content="在线音乐播放器"/>
     <style type="text/css">
         noscript {
             position: fixed;
@@ -23,7 +23,7 @@
             font-size: 34px;
             line-height: 100px
         }
-        
+
         #appLoading {
             position: fixed;
             top: 0;
@@ -33,11 +33,11 @@
             height: 100%;
             background: rgba(255, 255, 255, 1)
         }
-        
+
         #appLoading.removeAnimate {
             -webkit-animation: removeAnimate 1s 0s 1 both
         }
-        
+
         @-webkit-keyframes removeAnimate {
             from {
                 opacity: 1
@@ -46,7 +46,7 @@
                 opacity: 0
             }
         }
-        
+
         #appLoading img {
             position: absolute;
             top: 50%;
@@ -57,25 +57,25 @@
             transform: translateY(-50%) translateX(-50%)
         }
     </style>
-    <script>
-        (function() {
-            if (!!window.ActiveXObject || "ActiveXObject" in window) {
-                window.location = "http://music.mtnhao.com/tips.html";
-                return false
-            }
-        })();
-    </script>
+    <!--<script>-->
+    <!--(function() {-->
+    <!--if (!!window.ActiveXObject || "ActiveXObject" in window) {-->
+    <!--window.location = "http://music.mtnhao.com/tips.html";-->
+    <!--return false-->
+    <!--}-->
+    <!--})();-->
+    <!--</script>-->
 </head>
 
 <body>
-    <noscript>
-        在线音乐播放器<br/>为了更好的体验请开启javascript
-    </noscript>
-    <div id="appLoading">
-        <img src="./static/loading.gif" alt="loading" />
-    </div>
-    <div id="mmPlayer"></div>
-    <!-- built files will be auto injected -->
+<noscript>
+    在线音乐播放器<br/>为了更好的体验请开启javascript
+</noscript>
+<div id="appLoading">
+    <img src="./static/loading.gif" alt="loading"/>
+</div>
+<div id="root"></div>
+<!-- built files will be auto injected -->
 </body>
 
 </html>

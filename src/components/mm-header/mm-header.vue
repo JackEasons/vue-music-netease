@@ -8,9 +8,9 @@
                     <img :src="`${user.avatarUrl}?param=50y50`">
                     <span>{{user.nickname}}</span>
                 </router-link>
-                <!-- <dd class="user-btn" @click="openDialog(2)">退出</dd> -->
+                <dd class="user-btn" @click="openDialog(2)">退出</dd>
             </template>
-            <!-- <dd v-else class="user-btn" @click="openDialog(0)">登录</dd> -->
+            <dd v-else class="user-btn" @click="openDialog(0)">登录</dd>
         </dl>
         <!--登录-->
         <mm-dialog ref="loginDialog" headText="登录" confirmBtnText="登录" cancelBtnText="关闭" @confirm="login">
@@ -35,19 +35,19 @@
 </template>
 
 <script>
-    import {getUserPlaylist} from 'api'
-    import {mapGetters, mapActions} from 'vuex'
+    import { getUserPlaylist } from 'api'
+    import { mapGetters, mapActions } from 'vuex'
     import MmDialog from 'base/mm-dialog/mm-dialog'
 
     export default {
-        name: "mm-header",
+        name: 'mm-header',
         components: {
             MmDialog
         },
         data() {
             return {
                 user: {}, // 用户数据
-                uidValue: '', // 记录用户 UID
+                uidValue: '' // 记录用户 UID
             }
         },
         computed: {
@@ -61,51 +61,50 @@
             openDialog(key) {
                 switch (key) {
                     case 0:
-                        this.$refs.loginDialog.show();
-                        break;
+                        this.$refs.loginDialog.show()
+                        break
                     case 1:
-                        this.$refs.loginDialog.hide();
-                        this.$refs.helpDialog.show();
-                        break;
+                        this.$refs.loginDialog.hide()
+                        this.$refs.helpDialog.show()
+                        break
                     case 2:
-                        this.$refs.outDialog.show();
+                        this.$refs.outDialog.show()
                         break
                 }
             },
             // 退出登录
             out() {
-                this.user = {};
-                this.setUid(null);
+                this.user = {}
+                this.setUid(null)
                 this.$mmToast('退出成功！')
             },
             // 登录
             login() {
                 if (this.uidValue === '') {
-                    this.$mmToast('UID不能为空');
+                    this.$mmToast('UID不能为空')
                     this.openDialog(0)
                 }
                 this._getUserPlaylist(this.uidValue)
             },
             // 获取用户数据
             _getUserPlaylist(uid) {
-                getUserPlaylist(uid)
-                    .then(res => {
-                        if (res.data.code === 200) {
-                            this.uidValue = '';
-                            if (res.data.playlist.length === 0 || !res.data.playlist[0].creator) {
-                                this.$mmToast(`未查询找UID为 ${uid} 的用户信息`);
-                                return
-                            }
-                            this.setUid(uid);
-                            this.user = res.data.playlist[0].creator;
-                            setTimeout(() => {
-                                this.$mmToast(`${this.user.nickname} 欢迎使用`)
-                            }, 200)
+                getUserPlaylist(uid).then(res => {
+                    if (res.data.code === 200) {
+                        this.uidValue = ''
+                        if (res.data.playlist.length === 0 || !res.data.playlist[0].creator) {
+                            this.$mmToast(`未查询找UID为 ${uid} 的用户信息`)
+                            return
                         }
-                    })
+                        this.setUid(uid)
+                        this.user = res.data.playlist[0].creator
+                        setTimeout(() => {
+                            this.$mmToast(`${this.user.nickname} 欢迎使用`)
+                        }, 200)
+                    }
+                })
             },
             ...mapActions(['setUid'])
-        },
+        }
     }
 </script>
 
